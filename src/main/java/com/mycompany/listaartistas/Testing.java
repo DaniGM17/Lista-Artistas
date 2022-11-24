@@ -13,7 +13,6 @@ import java.io.InputStreamReader;
  * @author dania
  */
 public class Testing {
-
     public static void main(String[] args) throws IOException {
         BufferedReader buferTeclado = new BufferedReader(new InputStreamReader(System.in));
         String entrada;

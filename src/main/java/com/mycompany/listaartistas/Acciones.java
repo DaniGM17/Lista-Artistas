@@ -51,8 +51,7 @@ public class Acciones {
         }
     }
 
-    public static void borrarLinea(String borrar) {
-
+ public static void borrarLinea(String borrar) {
     try {
       String path = "C:\\NetBeans\\artistas.txt";
       File archivo = new File(path);
@@ -63,7 +62,7 @@ public class Acciones {
       File archivoTemp = new File(archivo+ ".tmp");
 
       BufferedReader br = new BufferedReader(new FileReader(archivo));
-      PrintWriter pw = new PrintWriter(new FileWriter(path));
+      PrintWriter pw = new PrintWriter(new FileWriter(archivoTemp));
 
       String linea = null;
 
