@@ -80,6 +80,9 @@ public class Testing {
                     Album unAlbum = new Album(album);
                     //acciones.add(unAlbum, nombre);
                     al.add(unAlbum);
+                    String artistaA = lista.get(pi).getName().toString();
+                    String albumA = album;
+                    acciones.escribirArchivo(albumA, artistaA);
                     break;
                 case 4://Eliminar un album
                     System.out.println("Tus artistas:");
