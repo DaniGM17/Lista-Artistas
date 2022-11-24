@@ -17,11 +17,12 @@ public class Testing {
     public static void main(String[] args) throws IOException {
         BufferedReader buferTeclado = new BufferedReader(new InputStreamReader(System.in));
         String entrada;
-        String fileName;
-        int opcion;
-        char seguir;
 
-        System.out.println("Agregando artistas");
-        Acciones.escribirArchivo();
+        /*System.out.println("Agregando artistas");
+        Acciones.escribirArchivo();*/
+        System.out.println("Artista a eliminar ");
+        entrada = buferTeclado.readLine();        
+        Acciones.borrarLinea(entrada);
+
     }
 }
