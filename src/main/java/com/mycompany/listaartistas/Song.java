@@ -4,8 +4,6 @@
  */
 package com.mycompany.listaartistas;
 
-import java.util.LinkedList;
-
 /**
  *
  * @author dania

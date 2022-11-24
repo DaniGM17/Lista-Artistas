@@ -4,17 +4,12 @@
  */
 package com.mycompany.listaartistas;
 
-import java.util.ArrayList;
-
-
-
 /**
  *
  * @author dania
  */
 public class Album {
     private String nombre;
-    ArrayList <Song> songs;
 
     public Album(String nombre){
         this.nombre=nombre;
@@ -28,13 +23,5 @@ public class Album {
         this.nombre = nombre;
     }
 
-    public ArrayList<Song> getSongs() {
-        return songs;
-    }
-
-    public void setSongs(ArrayList<Song> songs) {
-        this.songs = songs;
-    }
-    
     
 }
