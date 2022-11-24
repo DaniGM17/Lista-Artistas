@@ -128,6 +128,9 @@ public class Testing {
                     cancion = entrada;
                     Song unaCancion = new Song(cancion);
                     b.add(unaCancion);
+                    String albumC = b.getNombre().toString();
+                    String cancionA = cancion;
+                    acciones.escribirArchivo(cancionA, albumC);
                     break;
                 case 6://Eliminar cancion
                     System.out.println("Tus artistas:");
