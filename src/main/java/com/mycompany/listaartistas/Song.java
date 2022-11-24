@@ -12,9 +12,11 @@ import java.util.LinkedList;
  */
 public class Song {
     private String titulo;
-    private String duracion;
-    private String genero;
 
+    public Song(String titulo){
+        this.titulo=titulo;
+    }
+    
     public String getTitulo() {
         return titulo;
     }
@@ -23,21 +25,6 @@ public class Song {
         this.titulo = titulo;
     }
 
-    public String getDuracion() {
-        return duracion;
-    }
-
-    public void setDuracion(String duracion) {
-        this.duracion = duracion;
-    }
-
-    public String getGenero() {
-        return genero;
-    }
-
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
     
     
 }

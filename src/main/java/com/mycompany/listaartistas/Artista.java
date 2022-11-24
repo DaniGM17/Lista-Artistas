@@ -13,28 +13,18 @@ import java.util.LinkedList;
 public class Artista {
 
     private String name;
-    private String nacionalidad;
     LinkedList<Album> albunes;
 
-    public Artista(String nom, String nac, Album albunes) {
-        this.name = nom;
-        this.nacionalidad = nac;
+    public Artista(String name){
+        this.name = name;
     }
-
+    
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getNacionalidad() {
-        return nacionalidad;
-    }
-
-    public void setNacionalidad(String nacionalidad) {
-        this.nacionalidad = nacionalidad;
     }
 
     public LinkedList<Album> getAlbunes() {
@@ -44,5 +34,7 @@ public class Artista {
     public void setAlbunes(LinkedList<Album> albunes) {
         this.albunes = albunes;
     }
+
+    
 
 }

@@ -14,23 +14,18 @@ import java.util.ArrayList;
  */
 public class Album {
     private String nombre;
-    private String year;
     ArrayList <Song> songs;
 
+    public Album(String nombre){
+        this.nombre=nombre;
+    }
+    
     public String getNombre() {
         return nombre;
     }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public String getYear() {
-        return year;
-    }
-
-    public void setYear(String year) {
-        this.year = year;
     }
 
     public ArrayList<Song> getSongs() {
