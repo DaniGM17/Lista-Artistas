@@ -39,5 +39,11 @@ public class Testing {
         Artista unArtistal = new Artista(nombre);
         acciones.add(unArtistal);
         acciones.imprimir();
+        System.out.println("Escribe el artista: ");
+        entrada = bufer.readLine();
+        nombre = entrada;
+        Artista unArtistaD = new Artista(nombre);
+        acciones.remove(unArtistaD);
+        acciones.imprimir();
     }
 }

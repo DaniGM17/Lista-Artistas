@@ -27,6 +27,11 @@ public class Acciones {
          lista.add(artista);
          escribirArchivo(artista.getName().toString());
     }
+
+    public void remove(Artista artista){
+        lista.remove(artista);
+        borrarLinea(artista.getName().toString());
+    }
     
     public void imprimir(){
         for(int i=0; i < lista.size(); i++){
