@@ -13,6 +13,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.util.LinkedList;
 
 /**
  *
@@ -20,20 +21,28 @@ import java.io.PrintWriter;
  */
 public class Acciones {
 
-    public static void escribirArchivo() throws IOException {
+    LinkedList<Artista> lista = new LinkedList<Artista>();
+    
+    public void add(Artista artista) throws IOException{
+         lista.add(artista);
+         escribirArchivo(artista.getName().toString());
+    }
+    
+    public void imprimir(){
+        for(int i=0; i < lista.size(); i++){
+            System.out.println(lista.get(i).getName().toString() + "\n");
+        }
+    }
+    
+    public static void escribirArchivo(String dato) throws IOException {
         String archivo = "C:\\NetBeans\\artistas.txt";
         FileWriter fw = new FileWriter(archivo, true);
         /*FileWriter (archivo de archivo, agregado booleano): construye un objeto FileWriter
         dado un objeto File. Si el segundo argumento es verdadero, los bytes se escribirán al 
         final del archivo en lugar de al principio.
          */
-        BufferedReader bufer = new BufferedReader(new InputStreamReader(System.in));
-        String entrada;
-        char respuesta;
         try {
-            System.out.println("Escribe el artista: ");
-            entrada = bufer.readLine();
-            fw.write("\n" + entrada);//Añade la información al archivo
+            fw.write("\n" +dato);//Añade la información al archivo
         } catch (Exception e) {
             System.out.println("Error al escribir en archivo");
             e.printStackTrace();
