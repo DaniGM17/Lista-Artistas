@@ -33,6 +33,10 @@ LinkedList<Album> albunes;
    public void add(Album unAlbum){
        this.albunes.add(unAlbum);
    }
+   
+   public void remove(Album unAlbum){
+       this.albunes.remove(unAlbum);
+   }
 
     public LinkedList<Album> getAlbunes() {
         return albunes;
@@ -41,6 +45,8 @@ LinkedList<Album> albunes;
         public Album getAlbuM(int po) {
         return albunes.get(po);
     }
+        
+        
     
 
 }

@@ -33,6 +33,10 @@ public class Album {
     public void add(Song cancion) {
         this.songs.add(cancion);
     }
+    
+    public void remove(Song cancion){
+        this.songs.remove(cancion);
+    }
 
     public ArrayList<Song> getSongs() {
         return songs;
