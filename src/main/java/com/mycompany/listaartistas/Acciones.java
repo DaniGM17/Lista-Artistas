@@ -25,9 +25,8 @@ public class Acciones {
     LinkedList<Artista> lista = new LinkedList<Artista>();
     LinkedList<Album> listaA = new LinkedList<Album>();
     ArrayList <Song> listaS = new ArrayList<Song>();
-
+//Enviar el objeto
     public void add(Artista artista) throws IOException {
-        int op = 1;
         lista.add(artista);
         escribirArchivo(artista.getName().toString());
         System.out.println("Artista correctamente insertado");

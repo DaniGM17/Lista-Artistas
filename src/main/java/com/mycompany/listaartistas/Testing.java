@@ -23,6 +23,7 @@ public class Testing {
         String cancion;
         int op;
         char re;
+        LinkedList<Artista> lista = new LinkedList<Artista>();
         Acciones acciones = new Acciones();
 
         System.out.println("BIENVENIDO A TU A BIBILIOTECA DE CANCIONES");
@@ -45,7 +46,7 @@ public class Testing {
                     entrada = bufer.readLine();
                     nombre = entrada;
                     Artista unArtista = new Artista(nombre);
-                    acciones.add(unArtista);
+                    lista.add(unArtista);
                     break;
                 case 2:
                     System.out.println("Escribe el artista: ");
@@ -56,47 +57,93 @@ public class Testing {
                     break;
                 case 3:
                     System.out.println("Tus artistas:");
-                    acciones.leerArchivos("artistas");
-                    System.out.println("Escribe el artista: ");
+                    //debo hacer un for para imprimir todos los artistas en lista
+                    for (int i = 0; i < lista.size(); i++) {
+                        System.out.println("" + lista.get(i).getName().toString());
+                    }
+                    System.out.println("Escribe la posición ");
                     entrada = bufer.readLine();
-                    nombre = entrada;
+                    int pi = Integer.parseInt(entrada);
+                    Artista al = lista.get(pi); //Recupere el artista
                     System.out.println("Escribe el albúm: ");
                     entrada = bufer.readLine();
                     album = entrada;
-                   Album unAlbum = new Album(album);
-                    acciones.add(unAlbum, nombre);
+                    Album unAlbum = new Album(album);
+                    //acciones.add(unAlbum, nombre);
+                    al.add(unAlbum);
+                    
                     break;
                 case 4:
-                    System.out.println("Tus artistas:");
-                    acciones.leerArchivos("artistas");
-                    System.out.println("Escribe el artista: ");
+                     System.out.println("Tus artistas:");
+                    //debo hacer un for para imprimir todos los artistas en lista
+                    for (int i = 0; i < lista.size(); i++) {
+                        System.out.println("" + lista.get(i).getName().toString());
+                    }
+                    System.out.println("Escribe la posición ");
                     entrada = bufer.readLine();
-                    nombre = entrada;
-                    acciones.leerArchivos(nombre);
-                    System.out.println("Escribe el albúm: ");
+                    int p = Integer.parseInt(entrada);
+                    Artista a = lista.get(p); //Recupere el artista
+                    //Imprime los albunes de ese artista
+                     System.out.println("Sus albúmes:");
+                    for (int i = 0; i < a.albunes.size(); i++) {
+                        System.out.println("" + a.albunes.get(i).getNombre().toString());
+                    }
+                    System.out.println("Escribe la posición ");
                     entrada = bufer.readLine();
-                    album = entrada;
-                    acciones.leerArchivos(album);
+                    p = Integer.parseInt(entrada);
+                    Album b = a.getAlbuM(p);//Recupero un album especifico de un artista
                     System.out.println("Escribe el nombre de la canción");
                     entrada = bufer.readLine();
                     cancion = entrada;
                     Song unaCancion = new Song(cancion);
-                    acciones.add(unaCancion, album);
+                    b.add(unaCancion);
                     break;
                 case 5:
-                    acciones.leerArchivos("artistas");
+                    System.out.println("Tus artistas:");
+                    //debo hacer un for para imprimir todos los artistas en lista
+                    for (int i = 0; i < lista.size(); i++) {
+                        System.out.println("" + lista.get(i).getName().toString());
+                    }
                     break;
                 case 6:
-                    System.out.println("Escribe el artista: ");
+                    System.out.println("Tus artistas:");
+                    //debo hacer un for para imprimir todos los artistas en lista
+                    for (int i = 0; i < lista.size(); i++) {
+                        System.out.println("" + lista.get(i).getName().toString());
+                    }
+                    System.out.println("Escribe la posición ");
                     entrada = bufer.readLine();
-                    nombre = entrada;
-                    acciones.leerArchivos(nombre);
+                    int pu = Integer.parseInt(entrada);
+                    Artista ab = lista.get(pu); //Recupere el artista
+                    //Imprime los albunes de ese artista
+                     System.out.println("Sus albúmes:");
+                    for (int i = 0; i < ab.albunes.size(); i++) {
+                        System.out.println("" + ab.albunes.get(i).getNombre().toString());
+                    }
                     break;
                 case 7:
-                    System.out.println("Escribe el album: ");
+                   System.out.println("Tus artistas:");
+                    //debo hacer un for para imprimir todos los artistas en lista
+                    for (int i = 0; i < lista.size(); i++) {
+                        System.out.println("" + lista.get(i).getName().toString());
+                    }
+                    System.out.println("Escribe la posición ");
                     entrada = bufer.readLine();
-                    nombre = entrada;
-                    acciones.leerArchivos(nombre);
+                    int pq = Integer.parseInt(entrada);
+                    Artista aq = lista.get(pq); //Recupere el artista
+                    //Imprime los albunes de ese artista
+                     System.out.println("Sus albúmes:");
+                    for (int i = 0; i < aq.albunes.size(); i++) {
+                        System.out.println("" + aq.albunes.get(i).getNombre().toString());
+                    }
+                    System.out.println("Escribe la posición ");
+                    entrada = bufer.readLine();
+                    pq = Integer.parseInt(entrada);
+                    Album c = aq.getAlbuM(pq);//Recupero un album especifico de un artista
+                    System.out.println("Sus canciones:");
+                    for (int i = 0; i < c.songs.size(); i++) {
+                        System.out.println("" + c.songs.get(i).getTitulo().toString());
+                    }
                     break;
                 case 8:
                     acciones.imprimir();

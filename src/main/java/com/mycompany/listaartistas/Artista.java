@@ -4,6 +4,8 @@
  */
 package com.mycompany.listaartistas;
 
+import java.util.LinkedList;
+
 
 
 /**
@@ -13,9 +15,11 @@ package com.mycompany.listaartistas;
 public class Artista {
 
     private String name;
-
+LinkedList<Album> albunes;
+    
     public Artista(String name){
         this.name = name;
+        albunes = new LinkedList<>();
     }
     
     public String getName() {
@@ -25,5 +29,18 @@ public class Artista {
     public void setName(String name) {
         this.name = name;
     }
+    
+   public void add(Album unAlbum){
+       this.albunes.add(unAlbum);
+   }
+
+    public LinkedList<Album> getAlbunes() {
+        return albunes;
+    }
+    
+        public Album getAlbuM(int po) {
+        return albunes.get(po);
+    }
+    
 
 }

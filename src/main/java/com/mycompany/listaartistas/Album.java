@@ -4,17 +4,24 @@
  */
 package com.mycompany.listaartistas;
 
+import static com.mycompany.listaartistas.Acciones.escribirArchivo;
+import java.io.IOException;
+import java.util.ArrayList;
+
 /**
  *
  * @author dania
  */
 public class Album {
-    private String nombre;
 
-    public Album(String nombre){
-        this.nombre=nombre;
+    private String nombre;
+    ArrayList<Song> songs;
+
+    public Album(String nombre) {
+        this.nombre = nombre;
+        songs = new ArrayList<>();
     }
-    
+
     public String getNombre() {
         return nombre;
     }
@@ -23,5 +30,16 @@ public class Album {
         this.nombre = nombre;
     }
 
-    
+    public void add(Song cancion) {
+        this.songs.add(cancion);
+    }
+
+    public ArrayList<Song> getSongs() {
+        return songs;
+    }
+
+    public Song getSong(int po){
+        return songs.get(po);
+    }
+
 }
