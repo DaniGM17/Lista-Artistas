@@ -38,6 +38,7 @@ public class Testing {
             System.out.println("7.-Ver la lista de artistas");
             System.out.println("8.- Ver la lista de albúmes por artista");
             System.out.println("9.-Ver la lista de canciones por albúmes");
+            System.out.println("10.-Ver todos los artistas existentes");
             entrada = bufer.readLine();
             op = Integer.parseInt(entrada);
 
@@ -103,7 +104,7 @@ public class Testing {
                     entrada = bufer.readLine();
                     int pw = Integer.parseInt(entrada);
                     av.albunes.remove(pw);
-                break;
+                    break;
                 case 5://Agregar una cancion
                     System.out.println("Tus artistas:");
                     //debo hacer un for para imprimir todos los artistas en lista
@@ -159,7 +160,7 @@ public class Testing {
                     entrada = bufer.readLine();
                     int pñ = Integer.parseInt(entrada);
                     c.songs.remove(pñ);
-                break;
+                    break;
                 case 7:
                     System.out.println("Tus artistas:");
                     //debo hacer un for para imprimir todos los artistas en lista
@@ -206,6 +207,9 @@ public class Testing {
                     for (int i = 0; i < d.songs.size(); i++) {
                         System.out.println("" + d.songs.get(i).getTitulo().toString());
                     }
+                    break;
+                case 10:
+                    acciones.leerArchivos("artistas");
                     break;
             }
             System.out.println("¿Quieres realizar otra acción?");
