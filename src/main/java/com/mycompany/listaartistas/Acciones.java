@@ -30,7 +30,7 @@ public class Acciones {
     
     public void imprimir(){
         for(int i=0; i < lista.size(); i++){
-            System.out.println(lista.get(i).getName().toString() + "\n");
+            System.out.println(""+lista.get(i).getName().toString());
         }
     }
     
