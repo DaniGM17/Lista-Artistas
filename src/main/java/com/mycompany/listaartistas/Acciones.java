@@ -22,42 +22,6 @@ import java.util.LinkedList;
  */
 public class Acciones {
 
-    LinkedList<Artista> lista = new LinkedList<Artista>();
-    LinkedList<Album> listaA = new LinkedList<Album>();
-    ArrayList <Song> listaS = new ArrayList<Song>();
-//Enviar el objeto
-    public void add(Artista artista) throws IOException {
-        lista.add(artista);
-        escribirArchivo(artista.getName().toString());
-        System.out.println("Artista correctamente insertado");
-    }
-
-    public void add(Album album, String name) throws IOException {
-        listaA.add(album);
-        escribirArchivo(album.getNombre().toString(), name);
-        System.out.println("Album correctamente insertado");
-    }
-    
-    public void add(Song cancion, String album) throws IOException {
-        listaS.add(cancion);
-        escribirArchivo(cancion.getTitulo().toString(), album);
-        System.out.println("Cancion correctamente insertada");
-    }
-
-    public void remove(Artista artista) {
-        int op = 1;
-        lista.remove(artista);
-        borrarLinea(artista.getName().toString());
-        System.out.println("Artista correctamente eliminado");
-    }
-
-    public void imprimir() {
-        for (int i = 0; i < lista.size(); i++) {
-            System.out.println("" + lista.get(i).getName().toString());
-        }
-    }
-    //Artistas 
-
     public static void escribirArchivo(String dato) throws IOException {
         String archivo = "C:\\NetBeans\\artistas.txt";
         FileWriter fw = new FileWriter(archivo, true);
@@ -66,7 +30,7 @@ public class Acciones {
         final del archivo en lugar de al principio.
          */
         try {
-            fw.write("\n" + dato);//Añade la información al archivo
+            fw.write("\n"+dato);//Añade la información al archivo
         } catch (Exception e) {
             System.out.println("Error al escribir en archivo");
             e.printStackTrace();

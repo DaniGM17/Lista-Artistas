@@ -48,6 +48,7 @@ public class Testing {
                     nombre = entrada;
                     Artista unArtista = new Artista(nombre);
                     lista.add(unArtista);
+                    acciones.escribirArchivo(unArtista.getName().toString());
                     break;
                 case 2: //Eliminar un artista
                     System.out.println("Tus artistas:");
@@ -58,6 +59,9 @@ public class Testing {
                     System.out.println("Escribe la posición ");
                     entrada = bufer.readLine();
                     int pf = Integer.parseInt(entrada);
+                    String artista = lista.get(pf).getName().toString();
+                    System.out.println(artista);
+                    acciones.borrarLinea(artista);
                     lista.remove(pf);
                     break;
                 case 3://Agregar un album
